@@ -6,6 +6,7 @@
 
 		<script src="lib/codemirror.js"></script>
 		<link rel="stylesheet" href="lib/codemirror.css">
+		<link rel="stylesheet" href="theme/monokai.css">
 		<script src="mode/javascript/javascript.js"></script>
 		<script src="mode/htmlmixed/htmlmixed.js"></script>
 	</head>
@@ -19,7 +20,8 @@
 		var myCodeMirror = CodeMirror(document.body, {
 			value: 'begin typing',
   		lineNumbers: true,
-  		mode: 'text/html'
+  		mode: 'text/html',
+  		theme: 'monokai'
 		});
 
 
