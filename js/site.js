@@ -1,6 +1,4 @@
-var jsont = 
-'
-{
+var jsont = '{
 	website: {
 		id: "5016d42984ae3ecc9e018d91",
 		identifier: "five-demo",
@@ -48,9 +46,7 @@ var jsont =
 			excerpt: ""
 		}
 	]
-}
-
-';
+}';
 
 		// attach the .equals method to Array's prototype to call it on any array
 		Array.prototype.equals = function (array) {
