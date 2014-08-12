@@ -70,7 +70,7 @@ var collection = 'collection: { id: "50649e01e4b000b6a5f3008e", mainImageId: "51
 		var compareEditor = CodeMirror(function(elt){
 			compareArea.parentNode.replaceChild(elt, compareArea);
 		}, {
-			value: '{.section website}\n<h1>{siteTitle}</h1>\n{.end}',
+			value: JSON.stringify(website),
   		lineNumbers: true,
   		mode: 'htmlmixed',
   		theme: 'monokai'
