@@ -79,12 +79,12 @@
 		});
 
 		var answer = compareEditor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
-		answer = answer.filter(function(n){ return n != undefined || '' });
+		answer = answer.filter(function(n){ return n != '' });
 		var input;
 
 		button.addEventListener('click', function(e){
 			input = editor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
-			input = input.filter(function(n){ return n != undefined || '' });
+			input = input.filter(function(n){ return n != '' });
 
 			if(input.equals(answer)){
 				alert('correct!');
