@@ -50,7 +50,7 @@
 // 	]
 // }
 
-// attach the .equals method to Array's prototype to call it on any array
+// equals array method taken from Stack Overflow
 Array.prototype.equals = function (array) {
 	// if the other array is a falsy value, return
 	if (!array)
@@ -75,22 +75,23 @@ Array.prototype.equals = function (array) {
 	return true;
 }  
 
-
 var inputArea = document.getElementById('editor');
 var compareArea = document.getElementById('compare');
 var jsonArea = document.getElementById('json');
 var button = document.getElementById('check');
 
+//This is the input editor
 var editor = CodeMirror(function(elt){
 	inputArea.parentNode.replaceChild(elt, inputArea);
 }, {
-	value: 'begin typing',
+	value: 'Grab the site title and put it in an h1',
 	lineNumbers: true,
 	mode: 'htmlmixed',
 	theme: 'monokai',
 	autofocus: true
 });
 
+//This is the editor on the right, that shows the JSON object to JSONTify
 var jsonEditor = CodeMirror(function(elt){
 	jsonArea.parentNode.replaceChild(elt, jsonArea);
 }, {
@@ -101,6 +102,7 @@ var jsonEditor = CodeMirror(function(elt){
 	readOnly: true
 });
 
+//This editor is hidden and contains the answer to compare.
 var compareEditor = CodeMirror(function(elt){
 	compareArea.parentNode.replaceChild(elt, compareArea);
 }, {
