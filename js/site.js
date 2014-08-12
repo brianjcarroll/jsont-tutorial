@@ -78,6 +78,7 @@ Array.prototype.equals = function (array) {
 
 var inputArea = document.getElementById('editor');
 var compareArea = document.getElementById('compare');
+var jsonArea = document.getElementById('json');
 var button = document.getElementById('check');
 
 var editor = CodeMirror(function(elt){
@@ -88,6 +89,16 @@ var editor = CodeMirror(function(elt){
 	mode: 'htmlmixed',
 	theme: 'monokai',
 	autofocus: true
+});
+
+var jsonEditor = CodeMirror(function(elt){
+	compareArea.parentNode.replaceChild(elt, compareArea);
+}, {
+	value: '{\n website: {\n siteTitle: "My Super Cool Site"\n}',
+	lineNumbers: true,
+	mode: 'json',
+	theme: 'monokai',
+	readOnly: true
 });
 
 var compareEditor = CodeMirror(function(elt){
