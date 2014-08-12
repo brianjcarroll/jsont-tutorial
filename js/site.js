@@ -1,9 +1,29 @@
-var website = '{ 
-	website: { 
-		id: "5016d42984ae3ecc9e018d91", 
-		identifier: "five-demo", siteTitle: "VSSL", siteTagLine: "Super Flexible", siteDescription: "<p><strong>5&nbsp;</strong>is a <a href="http://en.wikipedia.org/wiki/Number"><span class="s1">number</span></a>, <a href="http://en.wikipedia.org/wiki/Numeral_system"><span class="s1">numeral</span></a>, and <a href="http://en.wikipedia.org/wiki/Glyph"><span class="s1">glyph</span></a>. It is the <a href="http://en.wikipedia.org/wiki/Natural_number"><span class="s1">natural number</span></a> following <a href="http://en.wikipedia.org/wiki/4_(number)"><span class="s1">4</span></a> and preceding <a href="http://en.wikipedia.org/wiki/6_(number)"><span class="s1">6</span></a>.</p>", authenticUrl: "http://five-demo.squarespace.com", baseUrl: "http://five-demo.squarespace.com"},'
+// var jsont = 
+// 
+// {
+// 	website: {
+// 		id: "5016d42984ae3ecc9e018d91",
+// 		identifier: "five-demo",
+// 		siteTitle: "VSSL",
+// 		siteTagLine: "Super Flexible",
+// 		siteDescription: "<p><strong>5&nbsp;</strong>is a <a href="http://en.wikipedia.org/wiki/Number"><span class="s1">number</span></a>, <a href="http://en.wikipedia.org/wiki/Numeral_system"><span class="s1">numeral</span></a>, and <a href="http://en.wikipedia.org/wiki/Glyph"><span class="s1">glyph</span></a>. It is the <a href="http://en.wikipedia.org/wiki/Natural_number"><span class="s1">natural number</span></a> following <a href="http://en.wikipedia.org/wiki/4_(number)"><span class="s1">4</span></a> and preceding <a href="http://en.wikipedia.org/wiki/6_(number)"><span class="s1">6</span></a>.</p>",
+// 		authenticUrl: "http://five-demo.squarespace.com",
+// 		baseUrl: "http://five-demo.squarespace.com"
+// 		},
 
-var collection = 'collection: { id: "50649e01e4b000b6a5f3008e", mainImageId: "517ebd22e4b05de3eecdda23", mainImage: {title: "",assetUrl: "http://static.squarespace.com/static/5016d42984ae3ecc9e018d91/t/517ebd22e4b05de3eecdda23/1367260455626/5254898599_c446ebc474_o.jpg"},title: "Blog",navigationTitle: "Blog",urlId: "blog",typeName: "blog",fullUrl: "/blog/"},'
+// 	collection: {
+// 		id: "50649e01e4b000b6a5f3008e",
+// 		mainImageId: "517ebd22e4b05de3eecdda23",
+// 		mainImage: {
+// 			title: "",
+// 			assetUrl: "http://static.squarespace.com/static/5016d42984ae3ecc9e018d91/t/517ebd22e4b05de3eecdda23/1367260455626/5254898599_c446ebc474_o.jpg"
+// 		},
+// 		title: "Blog",
+// 		navigationTitle: "Blog",
+// 		urlId: "blog",
+// 		typeName: "blog",
+// 		fullUrl: "/blog/"
+// 	},
 
 // 	items: [
 // 		{
@@ -30,67 +50,66 @@ var collection = 'collection: { id: "50649e01e4b000b6a5f3008e", mainImageId: "51
 // 	]
 // }
 
-		// attach the .equals method to Array's prototype to call it on any array
-		Array.prototype.equals = function (array) {
-		    // if the other array is a falsy value, return
-		    if (!array)
-		        return false;
+// attach the .equals method to Array's prototype to call it on any array
+Array.prototype.equals = function (array) {
+	// if the other array is a falsy value, return
+	if (!array)
+		return false;
+		
+		// compare lengths - can save a lot of time 
+	if (this.length != array.length)
+		return false;
 
-		    // compare lengths - can save a lot of time 
-		    if (this.length != array.length)
-		        return false;
-
-		    for (var i = 0, l=this.length; i < l; i++) {
-		        // Check if we have nested arrays
-		        if (this[i] instanceof Array && array[i] instanceof Array) {
-		            // recurse into the nested arrays
-		            if (!this[i].equals(array[i]))
-		                return false;       
-		        }           
-		        else if (this[i] != array[i]) { 
-		            // Warning - two different object instances will never be equal: {x:20} != {x:20}
-		            return false;   
-		        }           
-		    }       
-		    return true;
-		}  
+	for (var i = 0, l=this.length; i < l; i++) {
+		// Check if we have nested arrays
+		if (this[i] instanceof Array && array[i] instanceof Array) {
+		  // recurse into the nested arrays
+		  if (!this[i].equals(array[i]))
+	      return false;       
+		  }           
+		else if (this[i] != array[i]) { 
+		  // Warning - two different object instances will never be equal: {x:20} != {x:20}
+		  return false;   
+		}           
+	}       
+	return true;
+}  
 
 
-		var inputArea = document.getElementById('editor');
-		var compareArea = document.getElementById('compare');
-		var button = document.getElementById('check');
+var inputArea = document.getElementById('editor');
+var compareArea = document.getElementById('compare');
+var button = document.getElementById('check');
 
-		var editor = CodeMirror(function(elt){
-			inputArea.parentNode.replaceChild(elt, inputArea);
-		}, {
-			value: 'begin typing',
-  		lineNumbers: true,
-  		mode: 'htmlmixed',
-  		theme: 'monokai',
-  		autofocus: true
-		});
+var editor = CodeMirror(function(elt){
+	inputArea.parentNode.replaceChild(elt, inputArea);
+}, {
+	value: 'begin typing',
+	lineNumbers: true,
+	mode: 'htmlmixed',
+	theme: 'monokai',
+	autofocus: true
+});
 
-		var compareEditor = CodeMirror(function(elt){
-			compareArea.parentNode.replaceChild(elt, compareArea);
-		}, {
-			value: JSON.stringify(website),
-  		lineNumbers: true,
-  		mode: 'htmlmixed',
-  		theme: 'monokai'
-		});
+var compareEditor = CodeMirror(function(elt){
+	compareArea.parentNode.replaceChild(elt, compareArea);
+}, {
+	value: '{.section website}\n<h1>{siteTitle}</h1>\n{.end}',
+	lineNumbers: true,
+	mode: 'htmlmixed',
+	theme: 'monokai'
+});
 
-		var answer = compareEditor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
+var answer = compareEditor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
 		answer = answer.filter(function(n){ return n != '' });
-		var input;
+var input;
 
-		button.addEventListener('click', function(e){
-			input = editor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
-			input = input.filter(function(n){ return n != '' });
+button.addEventListener('click', function(e){
+	input = editor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
+	input = input.filter(function(n){ return n != '' });
 
-			if(input.equals(answer)){
-				alert('correct!');
-			} else {
-				alert('wrong LOL');
-			}
-
-		});
+	if(input.equals(answer)){
+		alert('correct!');
+	} else {
+		alert('wrong LOL');
+	}
+});
