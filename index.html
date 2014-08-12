@@ -18,6 +18,7 @@
 		
 		<div id="editorOne">
 			<div id="editor"></div>
+			<button id="check">Submit Answer</button>
 		</div>
 
 		<div id="editorTwo">
@@ -30,6 +31,7 @@
 
 		var inputArea = document.getElementById('editor');
 		var compareArea = document.getElementById('compare');
+		var button = document.getElementById('')
 
 		var editor = CodeMirror(function(elt){
 			inputArea.parentNode.replaceChild(elt, inputArea);
@@ -50,6 +52,21 @@
   		theme: 'monokai',
   		autofocus: true
 		});
+
+		var answer = compareArea.getValue();
+		var input;
+
+		button.addEventListener('click', function(e){
+			input = inputArea.getValue();
+
+			if(input == answer){
+				alert('correct!');
+			} else {
+				alert('wrong LOL');
+			}
+
+		});
+
 
 
 	</script>
