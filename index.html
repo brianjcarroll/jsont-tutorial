@@ -53,11 +53,13 @@
   		autofocus: true
 		});
 
-		var answer = compareEditor.getValue();
+		var answer = compareEditor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
+		answer = answer.filter(function(n){ return n != undefined });
 		var input;
 
 		button.addEventListener('click', function(e){
-			input = editor.getValue();
+			input = editor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
+			input = input.filter(function(n) { return n != undefined});
 
 			if(input == answer){
 				alert('correct!');
