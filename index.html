@@ -14,14 +14,37 @@
 	</head>
 
 	<body>
+		<div id="editorOne">
+
+		</div>
+
+		<div id="editorTwo">
+
+		</div>
 
 		
 
 	</body>
 
 	<script type="text/javascript">
-		var myCodeMirror = CodeMirror(document.body, {
+
+		var inputArea = document.getElementById('editorOne');
+		var compareArea = document.getElementById('editorTwo');
+
+		var editor = CodeMirror(function(elt){
+			inputArea.parentNode.replaceChild(elt, inputArea);
+		}, {
 			value: 'begin typing',
+  		lineNumbers: true,
+  		mode: 'htmlmixed',
+  		theme: 'monokai',
+  		autofocus: true
+		});
+
+		var compareEditor = CodeMirror(function(elt){
+			compareArea.parentNode.replaceChild(elt, compareArea);
+		}, {
+			value: '{.section website}<h1>{siteTitle}</h1>{.end}',
   		lineNumbers: true,
   		mode: 'htmlmixed',
   		theme: 'monokai',
