@@ -15,22 +15,21 @@
 	</head>
 
 	<body>
+		
 		<div id="editorOne">
-
+			<div id="editor"></div>
 		</div>
 
 		<div id="editorTwo">
-
+			<div id="compare"></div>
 		</div>
-
-		
 
 	</body>
 
 	<script type="text/javascript">
 
-		var inputArea = document.getElementById('editorOne');
-		var compareArea = document.getElementById('editorTwo');
+		var inputArea = document.getElementById('editor');
+		var compareArea = document.getElementById('compare');
 
 		var editor = CodeMirror(function(elt){
 			inputArea.parentNode.replaceChild(elt, inputArea);
