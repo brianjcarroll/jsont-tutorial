@@ -94,7 +94,7 @@ var editor = CodeMirror(function(elt){
 var jsonEditor = CodeMirror(function(elt){
 	jsonArea.parentNode.replaceChild(elt, jsonArea);
 }, {
-	value: '{\n website: {\n siteTitle: "My Super Cool Site"\n}',
+	value: '{\n website: {\n   siteTitle: "My Super Cool Site"\n  }\n}',
 	lineNumbers: true,
 	mode: 'json',
 	theme: 'monokai',
