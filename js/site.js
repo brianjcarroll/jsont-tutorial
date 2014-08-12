@@ -92,7 +92,7 @@ var editor = CodeMirror(function(elt){
 });
 
 var jsonEditor = CodeMirror(function(elt){
-	compareArea.parentNode.replaceChild(elt, compareArea);
+	jsonArea.parentNode.replaceChild(elt, jsonArea);
 }, {
 	value: '{\n website: {\n siteTitle: "My Super Cool Site"\n}',
 	lineNumbers: true,
