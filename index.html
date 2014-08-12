@@ -53,11 +53,11 @@
   		autofocus: true
 		});
 
-		var answer = compareEditor.getValue().replace(\s+(?=[^\])}]*([\[({]|$)), '');
+		var answer = compareEditor.getValue();
 		var input;
 
 		button.addEventListener('click', function(e){
-			input = editor.getValue().replace(\s+(?=[^\])}]*([\[({]|$)), '');
+			input = editor.getValue();
 
 			if(input == answer){
 				alert('correct!');
