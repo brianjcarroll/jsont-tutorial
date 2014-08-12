@@ -53,11 +53,11 @@
   		autofocus: true
 		});
 
-		var answer = compareArea.getValue();
+		var answer = compareEditor.getValue();
 		var input;
 
 		button.addEventListener('click', function(e){
-			input = inputArea.getValue();
+			input = editor.getValue();
 
 			if(input == answer){
 				alert('correct!');
