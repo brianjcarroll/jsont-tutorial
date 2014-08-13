@@ -123,8 +123,8 @@ button.addEventListener('click', function(e){
 	input = input.filter(function(n){ return n != '' });
 
 	if(input.equals(answer)){
-		feedback.innerHTML('correct!');
+		feedback.innerHTML = 'Correct!';
 	} else {
-		feedback.innerHTML('wrong LOL');
+		feedback.innerHTML = 'Wrong!';
 	}
 });
