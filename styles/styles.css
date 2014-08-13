@@ -1,3 +1,6 @@
+/* Global Styles 
+************************************************/
+
 *, *:before, *:after {
 	-moz-box-sizing: border-box; 
 	-webkit-box-sizing: border-box; 
@@ -34,6 +37,9 @@ a {
 	margin: 0 auto;
 	width: 100%;
 }
+
+/* Editor Styles 
+************************************************/
 
 .editor {
 	width: 50%;
@@ -77,6 +83,10 @@ a {
 #editorThree { 
 	display: none;
 }
+
+
+/* Instruction Styles 
+************************************************/
 
 .instructions {
 	margin-top: 20px;
