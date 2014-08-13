@@ -91,6 +91,10 @@ a {
 	font-size: 20px;
 }
 
+.instructions .tldr {
+	font-weight: 400;
+}
+
 .footer {
 
 }
