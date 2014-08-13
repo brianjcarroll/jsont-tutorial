@@ -128,7 +128,7 @@ button.addEventListener('click', function(e){
 		feedback.innerHTML = 'Wrong!';
 	}
 
-	setTimeOut(function(){
+	setTimeout(function(){
 		feedback.innerHTML = '';
 	}, 5000);
 });
