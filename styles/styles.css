@@ -8,6 +8,14 @@ body {
 
 }
 
+.header {
+
+}
+
+.site-title {
+
+}
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -29,4 +37,8 @@ body {
 
 #editorThree { 
 	display: none;
+}
+
+.footer {
+	
 }
