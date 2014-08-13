@@ -41,7 +41,13 @@
 
 			<div class="instructions output clear">
 				<h2>Instructions</h2>
-				<p>To grab the value of a key that is nested in an object, you must scope into that object.  We do so with {.section objectName} and closing the reference with {.end}</p>
+				<p>To grab the value of a key that is nested in an object, you must scope into that object.  We do so with {.section objectName} and closing the reference with {.end}.  Here's an example: </p>
+
+				<pre>
+					{.section collection}
+					  <p>{someKey}</p>
+					{.end}
+				</pre>
 
 				<p class="tldr">Scope into the website object and put the value of siteTitle in an &#60;h1&#62; tag</p>
 
