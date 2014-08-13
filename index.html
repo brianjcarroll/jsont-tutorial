@@ -43,9 +43,7 @@
 				<h2>Instructions</h2>
 				<p>To grab the value of a key that is nested in an object, you must scope into that object. We scope into objects with <span class="emphasize">{.section objectName}</span> and close the reference with <span class="emphasize">{.end}</span>. Once scoped, any key/value pair inside that object is referenced with <span class="emphasize">{keyName}</span>. Here's an example: </p>
 
-				<pre>{.section someObject}
-					     &#60;p&#62;{someKey}&#60;/p&#62;
-					   {.end}</pre>
+				<pre>{.section someObject}<br>  &#60;p&#62;{someKey}&#60;/p&#62;<br>{.end}</pre>
 
 				<p class="tldr">Scope into the website object and put the value of siteTitle in an &#60;h1&#62; tag</p>
 
