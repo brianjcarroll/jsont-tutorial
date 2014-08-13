@@ -59,7 +59,9 @@ a {
 }
 
 .button {
-	border: 1px solid black;
+	border: 1px solid #272822;
+	background-color: #272822;
+	color: white;
 	padding: 10px;
 	clear: both;
 	display: inline-block;
@@ -73,7 +75,7 @@ a {
 
 .button:hover {
 	color: white;
-	background-color: black;
+	background-color: #3c3d38;
 }
 
 .feedback {
