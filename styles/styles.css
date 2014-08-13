@@ -1,14 +1,27 @@
-#editorOne {
+
+body {
+
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.editor {
 	width: 40%;
 	float: left;
 }
 
+#editorOne {
+
+}
+
 #editorTwo {
-	width: 40%;
-	float: right;
+
 }
 
 #editorThree { 
 	display: none;
-
 }
