@@ -80,10 +80,11 @@ a {
 
 .footer nav ul li {
 	display: inline-block;
+	margin: 0 15px;
 }
 
 .footer nav ul li a {
-
+	padding: 15px;
 }
 
 .footer nav ul li a:hover {
