@@ -79,6 +79,7 @@ var inputArea = document.getElementById('editor');
 var compareArea = document.getElementById('compare');
 var jsonArea = document.getElementById('json');
 var button = document.getElementById('check');
+var feedback = document.getElementById('feedback');
 
 //This is the input editor
 var editor = CodeMirror(function(elt){
@@ -122,8 +123,8 @@ button.addEventListener('click', function(e){
 	input = input.filter(function(n){ return n != '' });
 
 	if(input.equals(answer)){
-		alert('correct!');
+		feedback.innerHTML('correct!');
 	} else {
-		alert('wrong LOL');
+		feedback.innerHTML('wrong LOL');
 	}
 });
