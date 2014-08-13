@@ -62,7 +62,7 @@ a {
 }
 
 .instructions p {
-
+	font-size: 20px;
 }
 
 .footer {
@@ -70,7 +70,7 @@ a {
 }
 
 .footer nav {
-
+	text-align: center;
 }
 
 .footer nav ul {
