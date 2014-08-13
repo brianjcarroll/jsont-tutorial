@@ -13,6 +13,10 @@ body {
 	font-weight: 300;
 }
 
+.clear {
+	clear: both;
+}
+
 .header {
 
 }
@@ -42,6 +46,19 @@ body {
 
 #editorThree { 
 	display: none;
+}
+
+.instructions {
+	margin-top: 20px;
+
+}
+
+.instructions h2 {
+	text-align: center;
+}
+
+.instructions p {
+
 }
 
 .footer {
