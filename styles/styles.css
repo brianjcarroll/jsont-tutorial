@@ -52,7 +52,7 @@ a {
 }
 
 #editorOne {
-	border-right: 3px solid white;
+	border-right: 5px solid white;
 }	
 
 .control {
@@ -110,6 +110,10 @@ a {
 
 .instructions .tldr {
 	font-weight: 400;
+}
+
+.instructions .code-example {
+	
 }
 
 .footer {
