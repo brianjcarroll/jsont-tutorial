@@ -45,7 +45,7 @@ a {
 }	
 
 .control {
-	margin: 10px 0;
+	margin-bottom: 5px;
 }
 
 .button {
@@ -53,7 +53,7 @@ a {
 	padding: 10px;
 	clear: both;
 	display: inline-block;
-	
+	margin-top: 5px;
 	color: black;
 	-webkit-transition: all .15s ease;
 	-moz-transition: all .15s ease;
