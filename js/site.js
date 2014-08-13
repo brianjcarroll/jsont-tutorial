@@ -117,6 +117,7 @@ var answer = compareEditor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
 var input;
 
 button.addEventListener('click', function(e){
+	e.preventDefault();
 	input = editor.getValue().split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
 	input = input.filter(function(n){ return n != '' });
 
