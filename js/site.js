@@ -127,6 +127,7 @@ button.addEventListener('click', function(e){
 		button.innerHTML = 'Next Test';
 	} else {
 		feedback.innerHTML = 'Wrong!';
+		button.innerHTML = 'Submit Answer';
 	}
 
 	setTimeout(function(){
