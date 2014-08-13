@@ -127,4 +127,8 @@ button.addEventListener('click', function(e){
 	} else {
 		feedback.innerHTML = 'Wrong!';
 	}
+
+	setTimeOut(function(){
+		feedback.innerHTML = '';
+	}, 5000);
 });
