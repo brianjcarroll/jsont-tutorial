@@ -124,6 +124,7 @@ button.addEventListener('click', function(e){
 
 	if(input.equals(answer)){
 		feedback.innerHTML = 'Correct!';
+		button.innerHTML = 'Next Test';
 	} else {
 		feedback.innerHTML = 'Wrong!';
 	}
