@@ -44,12 +44,16 @@ a {
 	border-right: 3px solid white;
 }	
 
+.control {
+	margin: 10px 0;
+}
+
 .button {
 	border: 1px solid black;
 	padding: 10px;
 	clear: both;
 	display: inline-block;
-	margin-top: 5px;
+	
 	color: black;
 	-webkit-transition: all .15s ease;
 	-moz-transition: all .15s ease;
