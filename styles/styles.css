@@ -51,6 +51,12 @@ a {
 	display: inline-block;
 	margin-top: 5px;
 	color: black;
+	transition: all .01s ease;
+}
+
+.button:hover {
+	color: white;
+	background-color: black;
 }
 
 #editorTwo {
